@@ -21,9 +21,8 @@ public class FileCount {	//计算整个文件中字符数，次数和行数，空文件三者为0
 		String str = " ";
 		int chars = 0, words = 0, lines = 0; 
 		while((str = br.readLine()) != null) {
-			 System.out.println(str);
 			int countWord = 1, location = 0;
-			for(location = 0; location < str.length(); location++) {
+			for(location = 0; location < str.length(); location++) {//逐行读取放进字符串里面  然后逐个字符判断是否为空格
 				if(str.charAt(location) == ' ')
 					countWord++;
 			}
